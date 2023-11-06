@@ -1,0 +1,64 @@
+tbody button{
+    display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(to bottom, #267a26, #337ab7); /* Color de fondo verde */
+      color: #fff; 
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  form button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #267a26, #337ab7); 
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); 
+    transition: background 0.3s, transform 0.2s;
+  }
+body button:hover{
+    background: linear-gradient(to bottom, #337ab7, #26537a); /* Estilo degradado azul inverso */
+    transform: scale(1.05);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+tbody{
+    background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
+}
+table th,table td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+table th{
+    background-color: #337ab7; /* Color de fondo azul */
+    color: #fff;
+}
+form{
+    background: linear-gradient(to bottom, #f5f5f5, #e5e5e5); 
+}
+
+form input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 250px;
+}
+form select{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
+}

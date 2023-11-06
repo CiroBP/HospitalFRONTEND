@@ -1,0 +1,50 @@
+
+<header>    
+<p>paciente works!</p>
+</header>
+
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let paciente of pacienteList">
+            <td>{{paciente.id}}</td>
+            <td>{{paciente.nombre}}</td>
+            <td><button (click)=" update(paciente,ver)">View</button></td>
+            <td><button (click)=" delete(paciente.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<form [formGroup]="pacienteForm">
+    <input class="form-control" formControlName="nombre">
+    <p style="color: red;" *ngIf="nombre.touched && nombre.errors?.required">Campo Obligatorio</p><br>
+    <select formControlName="medico">
+        <option *ngFor ="let Medico of medicoList" [value]="Medico.id">{{Medico.nombre}}</option>
+    </select>
+    <div style="text-align: center;"  colspan="2"><button (click)="add()">Agregar</button></div>
+
+</form>
+
+<ng-template #ver let-modal>
+    <div class='modal-header'>
+        <h5 class="modal-title">Ver paciente</h5>
+        <button class="close" (click)="modal.dismiss()"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <input class="form-control"[(ngModel)]="id2"readonly> <br>
+        <input class="form-control"[(ngModel)]="nombre2"ngbAutoFocus>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" (click)=" modal.close()">Actualizar</button>
+    </div>
+</ng-template>
+
+
+</body>
